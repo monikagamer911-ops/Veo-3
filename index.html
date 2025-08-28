@@ -1,0 +1,23 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+    }
+  }
+</script>
+<h1>Veo - Video Generation</h1>
+<p>Enter a prompt.</p>
+<p><textarea id="prompt-input" type="text" placeholder="Enter a prompt"></textarea></p>
+<p>Provide a conditioning image if the model supports it.</p>
+<p><input id="file-input" type="file" accept="image/*" /></p>
+<img alt="Condition image" id="img" />
+<p>Number of videos to generate (1-4):</p>
+<p><input id="num-videos-input" type="number" min="1" max="4" value="1" /></p>
+<button id="generate-button">Generate</button>
+<div id="quota-error">
+  <p>Veo is available with limited free generations per day for testing.</p>
+  <p>You exceeded your current quota, to continue please use your paid API key.</p>
+  <p><button id="open-key">Click here to add your API key.</button></p>
+</div>
+<div id="video-container"></div>
+<p id="status">Ready.</p>
